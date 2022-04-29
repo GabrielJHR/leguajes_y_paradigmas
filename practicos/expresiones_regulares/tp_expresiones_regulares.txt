@@ -1,0 +1,24 @@
+
+1. Identificadores en Pascal.
+( _ | [a-z] ) . ( [a-z] | _ | [0-9] )*
+
+2. Constante entera en Pascal.
+( - | e )D.D*
+
+3. Operadores relacionales del Pascal.
+= | ( < | > )( = | e) | (<>)
+
+4. Constantes reales.
+
+5. Conjunto de cadenas sobre {a, b} de longitud par.
+(a | b)*.(a | b)*
+
+6. (a | b)* . abb
+
+7. 0 | (1 | 0)*0
+
+8. (0 | 1)*(001 | 100)(0 | 1)*
+
+9.
+
+10. ( '(*' | { ) . ([a-z] | [0-9] | espacios | simbolos)* . ( } | '*)') 
