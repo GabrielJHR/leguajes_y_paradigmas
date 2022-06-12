@@ -49,3 +49,9 @@
   )
 )
 
+(defun promedio (L n) 
+  (cond
+    ((null (rest L)) (/ (first L) (+ (cantidad L) n)))
+    (T (+ (/ (first L) (+ (cantidad L) n)) (promedio (rest L) (+ n 1))))
+  )
+)
