@@ -1,0 +1,51 @@
+(defun cantidad (L) 
+  (cond 
+    ((null L) 0)
+    (T (+ 1 (cantidad (rest L))))
+  )
+)
+
+(defun sumatoria(L)
+  (cond
+    ((null L) 0)
+    (T (+ (first L) (sumatoria (rest L))))
+  )
+)
+
+(defun valorAbsoluto(x)
+  (cond
+    ((>= x 0) x)
+    (T (- 0 x))
+  )
+)
+
+(defun menores (L n) 
+  (cond 
+    ((null L) ())
+    (T (cond
+        ((>= (first L) n) (menores (rest L) n))
+        (T (cons (first L) (menores (rest L) n) ))
+      )
+    )
+  )
+)
+
+(defun menor (L)
+  (cond
+    ((null (rest L)) (first L))
+    (T 
+      (cond
+        ((< (first L) (menor (rest L))) (first L))
+        (T (menor(rest L)))
+      ) 
+    )
+  )
+)
+
+(defun potencia (n m)
+  (cond
+    ((= m 0) 1)
+    (T (* n (potencia n (- m 1))))
+  )
+)
+
